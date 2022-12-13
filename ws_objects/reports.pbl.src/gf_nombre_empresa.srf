@@ -1,0 +1,21 @@
+﻿$PBExportHeader$gf_nombre_empresa.srf
+global type gf_nombre_empresa from function_object
+end type
+
+forward prototypes
+global function string gf_nombre_empresa (string as_empresa)
+end prototypes
+
+global function string gf_nombre_empresa (string as_empresa);String	ls_nombre_empresa
+
+SELECT nombre  
+INTO :ls_nombre_empresa 
+FROM empresas  
+WHERE empresa = :as_empresa;
+
+
+IF isnull(ls_nombre_empresa) or trim(ls_nombre_empresa) = "" THEN ls_nombre_empresa=""
+
+RETURN ls_nombre_empresa
+end function
+
