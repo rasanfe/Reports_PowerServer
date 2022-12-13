@@ -227,25 +227,24 @@ end type
 
 type dw_1 from vs_dw_master within w_main
 integer x = 55
-integer y = 352
+integer y = 300
 integer width = 5115
-integer height = 2204
+integer height = 2256
 integer taborder = 60
 string dataobject = "dw_con_listado_venfac_obra"
 end type
 
 type cb_3 from commandbutton within w_main
 integer x = 4672
-integer y = 204
+integer y = 172
 integer width = 402
 integer height = 112
 integer taborder = 50
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 string text = "New Report"
 end type
 
@@ -261,15 +260,14 @@ end event
 
 type rb_3 from radiobutton within w_main
 integer x = 3552
-integer y = 200
+integer y = 192
 integer width = 402
 integer height = 80
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "All invoices"
@@ -278,15 +276,14 @@ end type
 
 type rb_2 from radiobutton within w_main
 integer x = 3557
-integer y = 124
+integer y = 116
 integer width = 402
 integer height = 80
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "Accounted"
@@ -294,15 +291,14 @@ end type
 
 type rb_1 from radiobutton within w_main
 integer x = 3552
-integer y = 48
+integer y = 40
 integer width = 434
 integer height = 80
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "No accounted"
@@ -313,12 +309,11 @@ integer x = 2382
 integer y = 116
 integer width = 649
 integer height = 64
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "customer department ID"
@@ -330,12 +325,11 @@ integer x = 1563
 integer y = 112
 integer width = 338
 integer height = 64
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "Customer ID"
@@ -347,12 +341,11 @@ integer x = 1061
 integer y = 100
 integer width = 187
 integer height = 64
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "Series"
@@ -361,16 +354,15 @@ end type
 
 type cb_1 from commandbutton within w_main
 integer x = 4265
-integer y = 204
+integer y = 172
 integer width = 402
 integer height = 108
 integer taborder = 40
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 string text = "Retrieve"
 end type
 
@@ -384,12 +376,11 @@ integer y = 96
 integer width = 402
 integer height = 108
 integer taborder = 30
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 borderstyle borderstyle = stylelowered!
 end type
@@ -400,12 +391,11 @@ integer y = 88
 integer width = 402
 integer height = 108
 integer taborder = 20
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 borderstyle borderstyle = stylelowered!
 end type
@@ -416,12 +406,11 @@ integer y = 84
 integer width = 247
 integer height = 112
 integer taborder = 20
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 string text = "1"
 borderstyle borderstyle = stylelowered!
@@ -437,12 +426,11 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-02-15"), Time("12:13:24.000000"))
-integer textsize = -10
-fontcharset fontcharset = ansi!
+datetime value = DateTime(Date("2022-12-13"), Time("13:29:27.000000"))
+integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 integer calendarfontweight = 400
 boolean todaysection = true
 boolean todaycircle = true
@@ -458,12 +446,11 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-02-15"), Time("12:13:24.000000"))
-integer textsize = -10
-fontcharset fontcharset = ansi!
+datetime value = DateTime(Date("2022-12-13"), Time("13:29:27.000000"))
+integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 integer calendarfontweight = 400
 boolean todaysection = true
 boolean todaycircle = true
@@ -474,12 +461,11 @@ integer x = 69
 integer width = 951
 integer height = 224
 integer taborder = 40
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "Date"
@@ -487,16 +473,14 @@ end type
 
 type gb_2 from groupbox within w_main
 integer x = 3488
-integer y = 8
 integer width = 549
-integer height = 312
+integer height = 288
 integer taborder = 40
-integer textsize = -10
+integer textsize = -8
 integer weight = 400
-fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
-string facename = "Tahoma"
+string facename = "Arial"
 long textcolor = 33554432
 long backcolor = 67108864
 end type
