@@ -199,22 +199,11 @@ event open;dp_1.value=datetime("01-01-2020")
 dp_2.value=datetime("31-01-2020")
 
 
-//native Setings
-	// Profile AdventureWorks2012
-	SQLCA.DBMS = "SNC SQL Native Client(OLE DB)"
-	SQLCA.LogPass ="Desa1"
-	SQLCA.ServerName = "ntserver-3\SQLExpress"
-	SQLCA.LogId = "sa"
-	SQLCA.AutoCommit = False
-	SQLCA.DBParm = "Database='persondemo02',TrimSpaces=1,DateFormat='\''dd-mm-yyyy\''',DateTimeFormat='\''dd-mm-yyyy hh:mm:ss\'''"
 
+	// PowerServer Connect
 	connect using sqlca;
 
-//Api Setings
-	gn_RestClient = Create RestClient
-	gn_RestClient.ClearRequestHeaders()
-	gn_RestClient.SetRequestHeader ("Content-Type", "application/json;charset=UTF-8")
-	gn_RestClient.SetRequestHeader("Accept-Encoding", "gzip")
+
 
 
 
