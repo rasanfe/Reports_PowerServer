@@ -2,6 +2,10 @@
 forward
 global type w_main from window
 end type
+type st_platform from statictext within w_main
+end type
+type st_myversion from statictext within w_main
+end type
 type st_url from statictext within w_main
 end type
 type dw_1 from vs_dw_master within w_main
@@ -50,6 +54,8 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+st_platform st_platform
+st_myversion st_myversion
 st_url st_url
 dw_1 dw_1
 cb_3 cb_3
@@ -76,6 +82,7 @@ end variables
 
 forward prototypes
 public subroutine wf_retrieve (vs_dw_master dwc)
+public subroutine wf_version (statictext ast_version, statictext ast_patform)
 end prototypes
 
 public subroutine wf_retrieve (vs_dw_master dwc);string ls_empresa, ls_serie,  ls_cli1, ls_cli2, ls_situacion, ls_anyo, ls_obra, ls_reporttitle
@@ -138,7 +145,30 @@ dwc.of_Retrieve(sqlca, a_values[])
 dwc.setredraw(true)		
 end subroutine
 
+public subroutine wf_version (statictext ast_version, statictext ast_patform);String ls_version, ls_platform
+environment env
+integer rtn
+
+rtn = GetEnvironment(env)
+
+IF rtn <> 1 THEN 
+	ls_version = string(year(today()))
+	ls_platform="32"
+ELSE
+	ls_version = "20"+ string(env.pbmajorrevision)+ "." + string(env.pbbuildnumber)
+	ls_platform=string(env.ProcessBitness)
+END IF
+
+ls_platform += " Bits"
+
+ast_version.text=ls_version
+ast_patform.text=ls_platform
+
+end subroutine
+
 on w_main.create
+this.st_platform=create st_platform
+this.st_myversion=create st_myversion
 this.st_url=create st_url
 this.dw_1=create dw_1
 this.cb_3=create cb_3
@@ -156,7 +186,9 @@ this.dp_2=create dp_2
 this.dp_1=create dp_1
 this.gb_1=create gb_1
 this.gb_2=create gb_2
-this.Control[]={this.st_url,&
+this.Control[]={this.st_platform,&
+this.st_myversion,&
+this.st_url,&
 this.dw_1,&
 this.cb_3,&
 this.rb_3,&
@@ -176,6 +208,8 @@ this.gb_2}
 end on
 
 on w_main.destroy
+destroy(this.st_platform)
+destroy(this.st_myversion)
 destroy(this.st_url)
 destroy(this.dw_1)
 destroy(this.cb_3)
@@ -197,7 +231,7 @@ end on
 
 event open;dp_1.value=datetime("01-01-2020")
 dp_2.value=datetime("31-01-2020")
-
+wf_version(st_myversion, st_platform)
 
 
 	// PowerServer Connect
@@ -208,6 +242,40 @@ dp_2.value=datetime("31-01-2020")
 
 
 end event
+
+type st_platform from statictext within w_main
+integer x = 4663
+integer y = 80
+integer width = 489
+integer height = 84
+integer textsize = -12
+integer weight = 700
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Arial"
+long textcolor = 16711680
+long backcolor = 67108864
+string text = "Bits"
+alignment alignment = Right!
+boolean focusrectangle = false
+end type
+
+type st_myversion from statictext within w_main
+integer x = 4663
+integer y = 4
+integer width = 489
+integer height = 84
+integer textsize = -12
+integer weight = 700
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Arial"
+long textcolor = 16711680
+long backcolor = 67108864
+string text = "Versión"
+alignment alignment = Right!
+boolean focusrectangle = false
+end type
 
 type st_url from statictext within w_main
 integer x = 73
@@ -426,7 +494,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-13"), Time("13:29:27.000000"))
+datetime value = DateTime(Date("2022-12-14"), Time("13:05:19.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -446,7 +514,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-13"), Time("13:29:27.000000"))
+datetime value = DateTime(Date("2022-12-14"), Time("13:05:19.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
