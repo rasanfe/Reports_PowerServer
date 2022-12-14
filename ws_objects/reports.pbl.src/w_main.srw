@@ -2,6 +2,8 @@
 forward
 global type w_main from window
 end type
+type st_4 from statictext within w_main
+end type
 type st_platform from statictext within w_main
 end type
 type st_myversion from statictext within w_main
@@ -54,6 +56,7 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+st_4 st_4
 st_platform st_platform
 st_myversion st_myversion
 st_url st_url
@@ -167,6 +170,7 @@ ast_patform.text=ls_platform
 end subroutine
 
 on w_main.create
+this.st_4=create st_4
 this.st_platform=create st_platform
 this.st_myversion=create st_myversion
 this.st_url=create st_url
@@ -186,7 +190,8 @@ this.dp_2=create dp_2
 this.dp_1=create dp_1
 this.gb_1=create gb_1
 this.gb_2=create gb_2
-this.Control[]={this.st_platform,&
+this.Control[]={this.st_4,&
+this.st_platform,&
 this.st_myversion,&
 this.st_url,&
 this.dw_1,&
@@ -208,6 +213,7 @@ this.gb_2}
 end on
 
 on w_main.destroy
+destroy(this.st_4)
 destroy(this.st_platform)
 destroy(this.st_myversion)
 destroy(this.st_url)
@@ -243,6 +249,23 @@ wf_version(st_myversion, st_platform)
 
 end event
 
+type st_4 from statictext within w_main
+integer x = 4114
+integer y = 48
+integer width = 402
+integer height = 64
+integer textsize = -10
+integer weight = 700
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 134217857
+long backcolor = 67108864
+string text = "Prueba v9"
+boolean focusrectangle = false
+end type
+
 type st_platform from statictext within w_main
 integer x = 4663
 integer y = 80
@@ -256,7 +279,7 @@ string facename = "Arial"
 long textcolor = 16711680
 long backcolor = 67108864
 string text = "Bits"
-alignment alignment = Right!
+alignment alignment = right!
 boolean focusrectangle = false
 end type
 
@@ -273,7 +296,7 @@ string facename = "Arial"
 long textcolor = 16711680
 long backcolor = 67108864
 string text = "Versión"
-alignment alignment = Right!
+alignment alignment = right!
 boolean focusrectangle = false
 end type
 
@@ -494,7 +517,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-14"), Time("13:05:19.000000"))
+datetime value = DateTime(Date("2022-12-14"), Time("17:29:53.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -514,7 +537,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-14"), Time("13:05:19.000000"))
+datetime value = DateTime(Date("2022-12-14"), Time("17:29:53.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
