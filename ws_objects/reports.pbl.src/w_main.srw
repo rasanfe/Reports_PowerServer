@@ -239,9 +239,18 @@ event open;dp_1.value=datetime("01-01-2020")
 dp_2.value=datetime("31-01-2020")
 wf_version(st_myversion, st_platform)
 
+if isPowerServerApp() = false then
+	// Profile AdventureWorks2012
+	SQLCA.DBMS = "SNC SQL Native Client(OLE DB)"
+	SQLCA.LogPass ="Desa1"
+	SQLCA.ServerName = "ntserver-3\SQLExpress"
+	SQLCA.LogId = "sa"
+	SQLCA.AutoCommit = False
+	SQLCA.DBParm = "Database='persondemo02',TrimSpaces=1,DateFormat='\''dd-mm-yyyy\''',DateTimeFormat='\''dd-mm-yyyy hh:mm:ss\'''"
+end if
 
-	// PowerServer Connect
-	connect using sqlca;
+// PowerServer Connect
+connect using sqlca;
 
 
 
@@ -262,7 +271,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 134217857
 long backcolor = 67108864
-string text = "Prueba v9"
+string text = "Prueba v10"
 boolean focusrectangle = false
 end type
 
@@ -517,7 +526,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-14"), Time("17:29:53.000000"))
+datetime value = DateTime(Date("2022-12-18"), Time("20:04:26.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -537,7 +546,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-14"), Time("17:29:53.000000"))
+datetime value = DateTime(Date("2022-12-18"), Time("20:04:26.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!

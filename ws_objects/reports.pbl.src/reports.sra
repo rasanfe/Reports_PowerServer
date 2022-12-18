@@ -63,29 +63,30 @@ destroy(this.timing_1)
 end on
 
 event open;//Authorization
-If gf_Authorization() <> 1 Then 
- 	Return
+if isPowerServerApp() = true then
+	If gf_Authorization() <> 1 Then 
+		Return
+	End If
+		
+	//StartSession
+	long ll_return
+	Try
+		ll_return = Beginsession()
+		If ll_return <> 0 Then
+			Messagebox("Beginsession Failed:" + String(ll_return), GetHttpResponseStatusText())
+		End if
+	Catch ( Throwable ex)
+	 MessageBox( "Throwable", ex.GetMessage())
+	 Return
+	End Try
+		
+	//Refresh Token for timing
+	If gl_Expiresin > 0 And (gl_Expiresin - gl_ClockSkew) > 0 Then
+	 //Timer = Expiresin - ClockSkew 
+	 //3600 - 3
+	 timing_1.Start(gl_Expiresin - gl_ClockSkew)
 End If
-	
-//StartSession
-long ll_return
-Try
-	ll_return = Beginsession()
-	If ll_return <> 0 Then
-		Messagebox("Beginsession Failed:" + String(ll_return), GetHttpResponseStatusText())
-	End if
-Catch ( Throwable ex)
- MessageBox( "Throwable", ex.GetMessage())
- Return
-End Try
-	
-//Refresh Token for timing
-If gl_Expiresin > 0 And (gl_Expiresin - gl_ClockSkew) > 0 Then
- //Timer = Expiresin - ClockSkew 
- //3600 - 3
- timing_1.Start(gl_Expiresin - gl_ClockSkew)
-End If
-	
+end if	
 open(w_main)
 end event
 
