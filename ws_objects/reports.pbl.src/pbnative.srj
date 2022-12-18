@@ -5,10 +5,10 @@ COM:RSRSYSTEM
 DES:ReportApiExample
 CPY:Ramón San Félix
 PRD:ReportApiExample
-PVS:2022.0.1892.10
-PVN:2022,0,1892,10
-FVS:2022.0.1892.10
-FVN:2022,0,1892,10
+PVS:2022.0.1892.11
+PVN:2022,0,1892,11
+FVS:2022.0.1892.11
+FVN:2022,0,1892,11
 MAN:0,asInvoker,0
 PBD:reports.pbl,,0
 OBJ:c:\proyecto pw2022\blog\powerbuilder\reports_powerserver\reports.pbl,gf_authorization,f
