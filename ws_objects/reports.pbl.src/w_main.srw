@@ -271,7 +271,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 134217857
 long backcolor = 67108864
-string text = "Prueba v12"
+string text = "Prueba v13"
 boolean focusrectangle = false
 end type
 
@@ -526,7 +526,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-19"), Time("13:11:53.000000"))
+datetime value = DateTime(Date("2022-12-20"), Time("12:48:39.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -546,7 +546,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-19"), Time("13:11:53.000000"))
+datetime value = DateTime(Date("2022-12-20"), Time("12:48:39.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
