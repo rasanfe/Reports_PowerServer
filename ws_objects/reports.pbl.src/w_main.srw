@@ -2,6 +2,8 @@
 forward
 global type w_main from window
 end type
+type cb_2 from commandbutton within w_main
+end type
 type st_4 from statictext within w_main
 end type
 type st_platform from statictext within w_main
@@ -56,6 +58,7 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_2 cb_2
 st_4 st_4
 st_platform st_platform
 st_myversion st_myversion
@@ -170,6 +173,7 @@ ast_patform.text=ls_platform
 end subroutine
 
 on w_main.create
+this.cb_2=create cb_2
 this.st_4=create st_4
 this.st_platform=create st_platform
 this.st_myversion=create st_myversion
@@ -190,7 +194,8 @@ this.dp_2=create dp_2
 this.dp_1=create dp_1
 this.gb_1=create gb_1
 this.gb_2=create gb_2
-this.Control[]={this.st_4,&
+this.Control[]={this.cb_2,&
+this.st_4,&
 this.st_platform,&
 this.st_myversion,&
 this.st_url,&
@@ -213,6 +218,7 @@ this.gb_2}
 end on
 
 on w_main.destroy
+destroy(this.cb_2)
 destroy(this.st_4)
 destroy(this.st_platform)
 destroy(this.st_myversion)
@@ -256,6 +262,23 @@ connect using sqlca;
 
 
 
+end event
+
+type cb_2 from commandbutton within w_main
+integer x = 2441
+integer width = 402
+integer height = 112
+integer taborder = 50
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "prueba"
+end type
+
+event clicked;open(w_prueba)
 end event
 
 type st_4 from statictext within w_main
@@ -526,7 +549,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-20"), Time("13:52:02.000000"))
+datetime value = DateTime(Date("2022-12-20"), Time("16:29:54.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -546,7 +569,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2022-12-20"), Time("13:52:02.000000"))
+datetime value = DateTime(Date("2022-12-20"), Time("16:29:54.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
