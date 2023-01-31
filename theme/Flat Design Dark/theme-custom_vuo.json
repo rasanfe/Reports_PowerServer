@@ -1,0 +1,55 @@
+{
+	"meta-info": {
+		"version": "190"
+	},
+	"w_main$statictext": {
+		"drawing": true,
+		"border": 0,
+		"background-transparent": false,
+		"normal-state": {
+			"background-color": "#323232",
+			"text-font": {
+				"color": "#C0C0C0"
+			}
+		}
+	},
+	"vs_r_master": {
+		"drawing": true,
+		"border": 0,
+		"background-transparent": false,
+		"normal-state": {
+			"background-color": "#323232",
+			"text-font": {
+				"color": "#FFFFFF"
+			}
+		},
+		"disabled-state": {
+			"background-color": "#323232",
+			"text-font": {
+				"color": "#FFFFFF"
+			}
+		}
+	},
+	"vs_cst_displayname.st_displayname": {
+		"drawing": true,
+		"border": 0,
+		"background-transparent": false,
+		"normal-state": {
+			"background-color": "#323232",
+			"text-font": {
+				"color": "#808080"
+			}
+		}
+	},
+	"vs_cst_displayname.st_copyright": {
+		"drawing": true,
+		"border": 0,
+		"background-transparent": false,
+		"normal-state": {
+			"background-color": "#323232",
+			"text-font": {
+				"color": "#808080"
+			}
+		}
+	}
+}
