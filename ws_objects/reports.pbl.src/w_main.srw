@@ -355,7 +355,6 @@ End If
 end event
 
 type st_4 from statictext within w_main
-boolean visible = false
 integer x = 1938
 integer y = 40
 integer width = 1257
@@ -613,7 +612,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-01-31"), Time("11:00:42.000000"))
+datetime value = DateTime(Date("2023-01-31"), Time("11:03:34.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -635,7 +634,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-01-31"), Time("11:00:42.000000"))
+datetime value = DateTime(Date("2023-01-31"), Time("11:03:34.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
