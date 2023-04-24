@@ -311,21 +311,29 @@ destroy(this.uo_background)
 destroy(this.gb_3)
 end on
 
-event open;nvo_coderobject lnv_coderobject
+event open;String ls_logidCrypted, ls_logpassCrypted, ls_logid, ls_logpass
+n_cst_security ln_Seg 
 dp_1.value=datetime("01-01-2020")
 dp_2.value=datetime("31-01-2020")
 wf_version(st_myversion, st_platform)
 
+
 IF isPowerServerApp() = FALSE THEN
 	// Profile AdventureWorks2012
 	SQLCA.DBMS = ProfileString("Setting.ini", "Setup", "DBMS", "") 
-	
-	lnv_coderobject = Create nvo_coderobject
-	SQLCA.LogPass = lnv_coderobject.of_Base64URLDecode( ProfileString("Setting.ini", "Setup", "LogPass", ""))
-	Destroy lnv_coderobject
-	
 	SQLCA.ServerName = ProfileString("Setting.ini", "Setup", "ServerName", "")
-	SQLCA.LogId =ProfileString("Setting.ini", "Setup", "LogId", "")
+		
+	ls_logidCrypted= ProfileString("Setting.ini", "Setup", "LogId", "")
+	ls_logpassCrypted=ProfileString("Setting.ini", "Setup", "LogPass", "")
+	
+	ln_Seg = Create n_cst_security
+	ls_logid= ln_Seg.of_Decrypt(ls_logidCrypted)
+	ls_logpass=ln_Seg.of_Decrypt( ls_logpassCrypted)
+	Destroy ln_Seg
+	
+	SQLCA.LogId =ls_logid
+	SQLCA.LogPass = ls_logpass
+				
 	if ProfileString("Setting.ini", "Setup", "AutoCommit", "False") = "True" then
 		SQLCA.AutoCommit = True
 	else
@@ -612,7 +620,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-01-31"), Time("11:03:34.000000"))
+datetime value = DateTime(Date("2023-04-24"), Time("16:56:30.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -634,7 +642,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-01-31"), Time("11:03:34.000000"))
+datetime value = DateTime(Date("2023-04-24"), Time("16:56:30.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!

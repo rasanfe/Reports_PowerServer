@@ -14,7 +14,7 @@ String  ls_TokenType, ls_AccessToken
 String  ls_type, ls_description, ls_uri, ls_state
 Integer li_Return, li_rtn
 JsonParser ljson_Parser
-nvo_coderobject lnv_coderobject
+n_cst_security ln_Seg
 
 li_rtn = -1
 ls_url = profilestring("CloudSetting.ini","setup","TokenURL","")
@@ -25,9 +25,9 @@ ls_url = profilestring("CloudSetting.ini","setup","TokenURL","")
 
 ls_UserName = ProfileString("CloudSetting.ini", "users", "userName", "")
 
-lnv_coderobject = Create nvo_coderobject
-ls_UserPass = lnv_coderobject.of_Base64URLDecode(ProfileString("CloudSetting.ini", "users", "userPass", ""))
-Destroy lnv_coderobject
+ln_Seg = Create n_cst_security
+ls_UserPass = ln_Seg.of_Decrypt(ProfileString("CloudSetting.ini", "users", "userPass", ""))
+Destroy ln_Seg
 
 
 IF IsNull(ls_UserName) OR Len(ls_UserName) = 0 THEN

@@ -85,7 +85,7 @@ if isPowerServerApp() = true then
 	 //Timer = Expiresin - ClockSkew 
 	 //3600 - 3
 	 timing_1.Start(gl_Expiresin - gl_ClockSkew)
-End If
+	End If
 end if	
 
 
