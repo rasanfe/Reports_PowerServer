@@ -27,7 +27,6 @@ ls_UserName = ProfileString("CloudSetting.ini", "users", "userName", "")
 
 ln_Seg = Create n_cst_security
 ls_UserPass = ln_Seg.of_Decrypt(ProfileString("CloudSetting.ini", "users", "userPass", ""))
-messagebox("ls_UserPass", ls_UserPass)
 Destroy ln_Seg
 
 
