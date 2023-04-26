@@ -312,7 +312,7 @@ destroy(this.gb_3)
 end on
 
 event open;String ls_logidCrypted, ls_logpassCrypted, ls_logid, ls_logpass
-n_cst_security ln_Seg 
+n_cst_security_ext ln_seg
 dp_1.value=datetime("01-01-2020")
 dp_2.value=datetime("31-01-2020")
 wf_version(st_myversion, st_platform)
@@ -326,10 +326,10 @@ IF isPowerServerApp() = FALSE THEN
 	ls_logidCrypted= ProfileString("Setting.ini", "Setup", "LogId", "")
 	ls_logpassCrypted=ProfileString("Setting.ini", "Setup", "LogPass", "")
 	
-	ln_Seg = Create n_cst_security
-	ls_logid= ln_Seg.of_Decrypt(ls_logidCrypted)
-	ls_logpass=ln_Seg.of_Decrypt( ls_logpassCrypted)
-	Destroy ln_Seg
+	ln_seg = CREATE n_cst_security_ext
+	ls_logid=  ln_seg.of_Decrypt(ls_logidCrypted)
+	ls_logpass= ln_seg.of_Decrypt( ls_logpassCrypted)
+	destroy ln_seg
 	
 	SQLCA.LogId =ls_logid
 	SQLCA.LogPass = ls_logpass
@@ -620,7 +620,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-04-24"), Time("16:56:30.000000"))
+datetime value = DateTime(Date("2023-04-26"), Time("10:14:09.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -642,7 +642,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-04-24"), Time("16:56:30.000000"))
+datetime value = DateTime(Date("2023-04-26"), Time("10:14:09.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!

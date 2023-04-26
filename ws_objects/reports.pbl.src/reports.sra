@@ -20,8 +20,10 @@ string gs_inifile
 Long gl_Expiresin
 //Refresh token clockskew 
 Long gl_ClockSkew = 3
-end variables
 
+
+
+end variables
 global type reports from application
 string appname = "reports"
 string themepath = "theme"

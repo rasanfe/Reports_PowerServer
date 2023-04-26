@@ -14,7 +14,7 @@ String  ls_TokenType, ls_AccessToken
 String  ls_type, ls_description, ls_uri, ls_state
 Integer li_Return, li_rtn
 JsonParser ljson_Parser
-n_cst_security ln_Seg
+n_cst_security_ext ln_Seg
 
 li_rtn = -1
 ls_url = profilestring("CloudSetting.ini","setup","TokenURL","")
@@ -24,11 +24,11 @@ ls_url = profilestring("CloudSetting.ini","setup","TokenURL","")
 //Return UserName & Password
 
 ls_UserName = ProfileString("CloudSetting.ini", "users", "userName", "")
+ls_UserPass = ProfileString("CloudSetting.ini", "users", "userPass", "")
 
-ln_Seg = Create n_cst_security
-ls_UserPass = ln_Seg.of_Decrypt(ProfileString("CloudSetting.ini", "users", "userPass", ""))
+ln_Seg = Create n_cst_security_ext
+ls_UserPass = ln_Seg.of_Decrypt(ls_UserPass)
 Destroy ln_Seg
-
 
 IF IsNull(ls_UserName) OR Len(ls_UserName) = 0 THEN
 	messagebox( "Atención", "Usuario del Token Vacio!" , Exclamation!)
