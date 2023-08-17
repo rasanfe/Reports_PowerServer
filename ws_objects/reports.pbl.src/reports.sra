@@ -24,6 +24,7 @@ Long gl_ClockSkew = 3
 
 
 end variables
+
 global type reports from application
 string appname = "reports"
 string themepath = "theme"
@@ -35,12 +36,17 @@ long richtextedittype = 5
 long richtexteditx64type = 5
 long richtexteditversion = 3
 string richtexteditkey = ""
-string appicon = "imagenes/PBApp.ico"
-string appruntimeversion = "22.0.0.1900"
+string appicon = "imagenes\PbApp.ico"
+string appruntimeversion = "22.1.0.2819"
 boolean manualsession = true
 boolean unsupportedapierror = true
+boolean ultrafast = false
 boolean bignoreservercertificate = false
 uint ignoreservercertificate = 0
+long webview2distribution = 0
+boolean webview2checkx86 = false
+boolean webview2checkx64 = false
+string webview2url = "https://developer.microsoft.com/en-us/microsoft-edge/webview2/"
 timing_1 timing_1
 end type
 global reports reports

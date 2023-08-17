@@ -365,7 +365,7 @@ end event
 type st_4 from statictext within w_main
 integer x = 1938
 integer y = 40
-integer width = 1257
+integer width = 2048
 integer height = 152
 integer textsize = -20
 integer weight = 700
@@ -375,7 +375,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 16777215
 long backcolor = 553648127
-string text = "PowerTalks2023"
+string text = "PowerBuilder 2022 R2 GA Test"
 boolean focusrectangle = false
 end type
 
@@ -620,7 +620,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-04-26"), Time("10:14:09.000000"))
+datetime value = DateTime(Date("2023-08-17"), Time("12:15:25.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -642,7 +642,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-04-26"), Time("10:14:09.000000"))
+datetime value = DateTime(Date("2023-08-17"), Time("12:15:25.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!

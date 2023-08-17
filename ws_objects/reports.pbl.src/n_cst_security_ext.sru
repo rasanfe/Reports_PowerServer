@@ -18,10 +18,10 @@ Constant String ls_MasterKey =  "reports"
 Constant String ls_MasterIV  = "IV202201900"
 
 //Leemos el Token del Archivo INI
-IF isPowerServerApp() = FALSE THEN
-	ls_token =ProfileString("Setting.ini", "Setup", "SecurityToken", "")
-ELSE 
+IF isPowerServerApp() = TRUE THEN
 	ls_token =ProfileString("CloudSetting.ini", "Setup", "SecurityToken", "")
+ELSE 
+	ls_token =ProfileString("Setting.ini", "Setup", "SecurityToken", "")
 END IF
 
 IF  of_get_Token(ls_token, ls_MasterKey, ls_MasterIV, REF ls_key, REF ls_IV) THEN
