@@ -685,13 +685,15 @@ choose case lstr_ovi.dwMajorVersion
 					case 18363
 						as_csdversion = "November 2019 Update (1909)"
 					case 19041
-						as_csdversion = "May 2020 Update (2004)"
+						as_csdversion = "Version 2004"
 					case 19042
-						as_csdversion = "October 2020 Update (20H2)"
+						as_csdversion = "Version 20H2"
 					case 19043
 						as_csdversion = "Version 21H1"
 					case 19044
 						as_csdversion = "Version 21H2"
+					case 19045
+						as_csdversion = "Version 22H2"
 					case else
 						as_csdversion = "OS Build: " + String(BuildNumber)
 				end choose
