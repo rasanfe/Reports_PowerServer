@@ -375,7 +375,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 16777215
 long backcolor = 553648127
-string text = "PowerBuilder 2022 R2 GA Test"
+string text = "PowerBuilder 2022 R3 GA Test"
 boolean focusrectangle = false
 end type
 
@@ -620,7 +620,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-10-24"), Time("11:17:12.000000"))
+datetime value = DateTime(Date("2024-01-19"), Time("13:12:38.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
@@ -642,7 +642,7 @@ datetimeformat format = dtfcustom!
 string customformat = "dd-MM-yy"
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2023-10-24"), Time("11:17:12.000000"))
+datetime value = DateTime(Date("2024-01-19"), Time("13:12:38.000000"))
 integer textsize = -8
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
