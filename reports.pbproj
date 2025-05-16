@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Project>
+  <Type Name="pb"/>
+  <Application Name="reports"/>
+  <Libraries AppEntry="reports.pbl">
+    <Library Path="reports.pbl"/>
+    <Library Path="pfc_resize_service.pbl"/>
+    <Library Path="topwiz.pbl"/>
+  </Libraries>
+</Project>
